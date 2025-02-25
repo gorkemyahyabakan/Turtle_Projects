@@ -48,7 +48,7 @@ def rastgelegoster():
     turtle_gızle()
     a=random.choice(turtlelar)            ### rastgele gösterde önce turtle ları gizledik 500 milisaniyede bir turtle gözsterilirken diğerinin silinmesi için.
     a.showturtle()           ### recursive yaptık bir fonkun içinde kendini kullandık bu sayede sürekli gerçekleştirecek.
-   turtle_ekranı.ontimer(rastgelegoster,500)
+    turtle_ekranı.ontimer(rastgelegoster,500)
 def sanıyesay(time):
    global game_over
    sanıye_turtle.hideturtle()
