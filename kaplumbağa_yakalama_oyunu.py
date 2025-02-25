@@ -1,5 +1,6 @@
 import turtle
 import random
+
 turtle_ekranı=turtle.Screen()
 skor=0
 game_over=False
@@ -9,6 +10,7 @@ turtlelar=[] ## turtle lara kolay ulaşmak için oluşturduk.
 turtle_skor=turtle.Turtle()
 sanıye_turtle=turtle.Turtle()
 FONT=("Arial","30","normal")
+
 def skor_turtle():
    turtle_skor.hideturtle()
    turtle_skor.color("purple")
@@ -40,15 +42,18 @@ def turtlelar_eklenıyor():
  for x in x_koordinat:
     for y in y_koordinat:
         turtle_olustur(x,y)
+
 def turtle_gızle():
    for a in turtlelar:
       a.hideturtle()   ### turtle lar listesinde gezinerek her turtle ı tek tek gizledik.
+
 def rastgelegoster():
    if not game_over:  ### oyun devam ettiği sürece kısacası game over false olduğu sürece bunu yap demek.
     turtle_gızle()
     a=random.choice(turtlelar)            ### rastgele gösterde önce turtle ları gizledik 500 milisaniyede bir turtle gözsterilirken diğerinin silinmesi için.
     a.showturtle()           ### recursive yaptık bir fonkun içinde kendini kullandık bu sayede sürekli gerçekleştirecek.
     turtle_ekranı.ontimer(rastgelegoster,500)
+
 def sanıyesay(time):
    global game_over
    sanıye_turtle.hideturtle()
